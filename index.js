@@ -12,4 +12,5 @@ app.use(bodyParser.json({limit: "30mb", extended: true}))
 app.use(bodyParser.urlencoded({limit: "30mb", extended: true}))
 app.use(cors());
 
-const CONNECTION_URL = 'mongodb+srv://<username>:<password>@deltav.mvoo1ik.mongodb.net/?retryWrites=true&w=majority'
+const CONNECTION_URL = `mongodb+srv://${process.env.MONGODB_USERNAME}:${MONGODB_PASSWORD}@deltav.mvoo1ik.mongodb.net/?retryWrites=true&w=majority`;
+
